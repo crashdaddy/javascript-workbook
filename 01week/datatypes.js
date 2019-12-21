@@ -13,6 +13,19 @@ function formatDate(date) {
     return day + ' ' + monthNames[monthIndex] + ' ' + year;
   }
   
-  console.log(formatDate(new Date()));
+console.log(formatDate(new Date()));
+
+console.log("Here's some data types:");
+
+
+var dataBoolean = new Boolean(true);
+var dataDecimal = 3.14;
+var dataInteger = 69420;
+var dataString = "nice";
+
+console.log(dataBoolean);
+console.log(dataDecimal);
+console.log(dataInteger);
+console.log(dataString);
 
 
