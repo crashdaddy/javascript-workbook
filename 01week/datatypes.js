@@ -23,9 +23,9 @@ var dataDecimal = 3.14;
 var dataInteger = 69420;
 var dataString = "nice";
 
-console.log(dataBoolean);
-console.log(dataDecimal);
-console.log(dataInteger);
-console.log(dataString);
+console.log(dataBoolean + ' is type: ' + typeof dataBoolean);
+console.log(dataDecimal  + ' is type: ' + typeof dataDecimal);
+console.log(dataInteger + ' is type: ' +  typeof dataInteger);
+console.log(dataString + ' is type: ' +  typeof dataString);
 
 
