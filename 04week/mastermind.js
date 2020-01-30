@@ -7,6 +7,8 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let guessMax = 10;
+let gameOver = false;
 let board = [];
 let solution = '';
 let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
@@ -64,12 +66,23 @@ function mastermind(guess) {
 }
 }
 
+function updateScore() {
+  
+  if (board.length >= guessMax) {
+    gameOver=true;
+  }
+}
+
 
 function getPrompt() {
   rl.question('guess: ', (guess) => {
     mastermind(guess);
     printBoard();
-    getPrompt();
+    updateScore();
+    if (!gameOver) {
+      console.log('Guess again.') 
+      getPrompt();
+    } else console.log('You ran out of turns! The solution was '+solution);
   });
 }
 
