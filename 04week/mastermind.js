@@ -55,7 +55,8 @@ function generateHint(guess) {
 }
 
 function mastermind(guess) {
-  solution = 'abcd'; // Comment this out to generate a random solution
+  if (solution==='') generateSolution();
+  //solution = 'abcd'; // Comment this out to generate a random solution
   // your code here
   if (guess === solution) {
     return ("You guessed it!");
